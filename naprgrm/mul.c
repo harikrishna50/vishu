@@ -1,0 +1,77 @@
+#include<stdio.h>
+int main()
+     {
+        int i,j,k,r1,c1,r2,c2,r3,c3;
+       
+        //int a[i][j];
+        printf("enter rows and colums fist matrix:");
+        scanf("%d%d",&r1,&c1);
+        printf("enter fist matirx:");
+        int a[r1][c1];
+        for(i=0;i<r1;i++)
+        {
+         for(j=0;j<c1;j++)
+         {
+            scanf("%d",&a[i][j]);
+          }
+        }
+        printf("fist matix is :\n");
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)                                      
+         {
+           printf("%d",a[i][j]);
+          }
+            printf("\n");
+        } 
+        printf("enter rows aand colyms of 2nd matiox:");
+        scanf("%d%d",&r2,&c2);
+         
+          printf("enter 2nd matirx:");
+          int b[r2][c2];        
+        for(i=0;i<r2;i++)
+        {
+         for(j=0;j<c2;j++)
+         {
+           scanf("%d",&b[i][j]);
+          }
+        }
+         printf(" 2nd matix is :\n");
+        for(i=0;i<r2;i++)
+        {
+         for(j=0;j<c2;j++)                                      
+         {
+           printf("%d",b[i][j]);
+          }
+            printf("\n");
+        }
+            printf("third matrix is :");
+        int c[r3][c3];
+        for(i=0;i<r1;i++)
+        {
+          for(j=0;j<c2;j++)
+          {
+            for(k=0;k<r1;k++)
+            {
+              c[i][j]+=a[i][j]*b[k][j];
+            }
+          }
+        }
+        printf("multplication:");
+        for(i=0;i<r1;i++)
+        {
+          for(j=0;j<c1;j++)
+          {
+            for(k=0;k<r1;k++)
+            {
+              printf("%d",c[i][j]);
+            }
+            printf("\n");
+          }
+        }
+      }
+    
+
+
+        
+ 
